@@ -10,10 +10,10 @@ echo "Step 1: Creating the 'raw' directory (if it doesn't already exist)..."
 mkdir -p raw
 echo "Directory 'raw' is ready."
 
-echo "Step 3: Downloading the CSV file from the provided URL..."
+echo "Step 2: Downloading the CSV file from the provided URL..."
 curl -L -o raw/financial_file.csv "$csv_url"
 
-echo "Step 4: Confirming the file was downloaded successfully and not empty..."
+echo "Step 3: Confirming the file was downloaded successfully and not empty..."
 if [ -s "raw/financial_file.csv" ]; then
     echo "Success: 'financial_file.csv' has been saved in the 'raw' folder."
     ls -lh raw/financial_file.csv
@@ -24,7 +24,7 @@ fi
 
 
 #------------------- TRANSFORM ----------------------------
-echo "Step 5: Change Variable_code column name to variable_code"
+echo "Step 4: Change Variable_code column name to variable_code"
 sed -i '' '1s/Variable_code/variable_code/' raw/financial_file.csv
 
 echo " Make directory Transformed to hold the transformed file"
@@ -43,10 +43,25 @@ NR==1 {
 {print $c1","$c2","$c3","$c4}
 ' raw/financial_file.csv > Transformed/2023_year_finance.csv
 
-echo "Step 6: Confirming the file was saved in the 'Transformed' folder..."
+echo "Step 5: Confirming the file was saved in the 'Transformed' folder..."
 if [ -s "Transformed/2023_year_finance.csv" ]; then
     echo "Success: '2023_year_finance.csv' has been saved in the 'Transformed' folder."
 else
     echo "Error: File was not created or is empty in 'Transformed' folder."
+    exit 1
+fi
+#------------- LOAD  -------------------------
+echo "Step 6: Creating the 'Gold' directory (if it doesn't already exist)..."
+mkdir -p Gold
+echo "Directory 'Gold' is ready."
+
+echo "Step 7: Loading the transformed file into the Gold directory..."
+cp Transformed/2023_year_finance.csv Gold/2023_year_finance.csv
+
+echo "Step 8: Confirming the file was saved in the 'Gold' folder..."
+if [ -s "Gold/2023_year_finance.csv" ]; then
+    echo "Success: '2023_year_finance.csv' has been saved in the 'Gold' folder."
+else
+    echo "Error: File was not created or is empty in 'Gold' folder."
     exit 1
 fi

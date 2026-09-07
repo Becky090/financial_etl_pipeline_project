@@ -1,9 +1,0 @@
-{
-  "warehouse": "North Distribution Center",
-  "last_updated": "2026-09-01",
-  "items": [
-    {"sku": "A1001", "product": "Wireless Mouse", "quantity": 240, "price": 15.99},
-    {"sku": "A1002", "product": "USB-C Cable", "quantity": 560, "price": 8.50},
-    {"sku": "A1003", "product": "Laptop Stand", "quantity": 75, "price": 29.99}
-  ]
-}

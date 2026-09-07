@@ -1,0 +1,3 @@
+This is a plain text file.
+It should NOT be moved by the script, since the script only targets .csv and .json files.
+Use this file to confirm the script correctly ignores non-matching file types.

@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "Alice Johnson", "department": "Engineering", "salary": 95000},
+  {"id": 2, "name": "Brian Smith", "department": "Marketing", "salary": 72000},
+  {"id": 3, "name": "Carla Diaz", "department": "Sales", "salary": 68000},
+  {"id": 4, "name": "David Chen", "department": "Engineering", "salary": 98000},
+  {"id": 5, "name": "Ella Brown", "department": "HR", "salary": 61000}
+]

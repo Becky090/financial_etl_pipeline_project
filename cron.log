@@ -1,0 +1,29 @@
+/bin/sh: /Users/mac/Documents/financial/financial_script.sh: Permission denied
+/bin/bash: /Users/mac/Documents/financial/financial_script.sh: Operation not permitted
+Step 1: Creating the 'raw' directory (if it doesn't already exist)...
+Directory 'raw' is ready.
+Step 2: Downloading the CSV file from the provided URL...
+curl: option : blank argument where content is expected
+curl: try 'curl --help' or 'curl --manual' for more information
+Step 3: Confirming the file was downloaded successfully and not empty...
+Error: File download failed or file is empty. 'financial_file.csv' not found.
+Step 1: Creating the 'raw' directory (if it doesn't already exist)...
+Directory 'raw' is ready.
+Step 2: Downloading the CSV file from the provided URL...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3 7876k    3  255k    0     0   155k      0  0:00:50  0:00:01  0:00:49  155k 10 7876k   10  847k    0     0   316k      0  0:00:24  0:00:02  0:00:22  316k 19 7876k   19 1512k    0     0   415k      0  0:00:18  0:00:03  0:00:15  415k 31 7876k   31 2464k    0     0   532k      0  0:00:14  0:00:04  0:00:10  531k 42 7876k   42 3367k    0     0   598k      0  0:00:13  0:00:05  0:00:08  683k 56 7876k   56 4472k    0     0   674k      0  0:00:11  0:00:06  0:00:05  845k 73 7876k   73 5784k    0     0   758k      0  0:00:10  0:00:07  0:00:03  997k 98 7876k   98 7736k    0     0   896k      0  0:00:08  0:00:08 --:--:-- 1246k100 7876k  100 7876k    0     0   898k      0  0:00:08  0:00:08 --:--:-- 1308k
+Step 3: Confirming the file was downloaded successfully and not empty...
+Success: 'financial_file.csv' has been saved in the 'raw' folder.
+-rw-r--r--  1 mac  staff   7.7M Sep  7 13:15 raw/financial_file.csv
+Step 4: Change Variable_code column name to variable_code
+ Make directory Transformed to hold the transformed file
+Transformed folder created
+Transform data( select year, Value, Units, variable_code columns)
+Step 5: Confirming the file was saved in the 'Transformed' folder...
+Success: '2023_year_finance.csv' has been saved in the 'Transformed' folder.
+Step 6: Creating the 'Gold' directory (if it doesn't already exist)...
+Directory 'Gold' is ready.
+Step 7: Loading the transformed file into the Gold directory...
+Step 8: Confirming the file was saved in the 'Gold' folder...
+Success: '2023_year_finance.csv' has been saved in the 'Gold' folder.

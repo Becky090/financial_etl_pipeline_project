@@ -5,6 +5,9 @@
 # Purpose: Building an ETL pipeline
 # ------------------------------------------------------
 
+# Load environment variables (csv_url) from .env file
+source /Users/mac/Documents/financial/.env
+
 #------------- EXTRACT -------------------------
 echo "Step 1: Creating the 'raw' directory (if it doesn't already exist)..."
 mkdir -p raw
